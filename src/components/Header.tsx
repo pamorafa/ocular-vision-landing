@@ -22,6 +22,9 @@ const Header = () => {
             <a href="#inicio" className="text-gray-700 hover:text-bottle-600 transition-colors font-medium">
               Inicio
             </a>
+            <Link to="/cristales" className="text-gray-700 hover:text-bottle-600 transition-colors font-medium">
+              Cristales
+            </Link>
             <a href="#caracteristicas" className="text-gray-700 hover:text-bottle-600 transition-colors font-medium">
               Características
             </a>
@@ -64,6 +67,9 @@ const Header = () => {
               <a href="#inicio" className="text-gray-700 hover:text-bottle-600 font-medium py-2">
                 Inicio
               </a>
+              <Link to="/cristales" className="text-gray-700 hover:text-bottle-600 font-medium py-2">
+                Cristales
+              </Link>
               <a href="#caracteristicas" className="text-gray-700 hover:text-bottle-600 font-medium py-2">
                 Características
               </a>
