@@ -1,5 +1,6 @@
 
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Glasses } from 'lucide-react';
 
@@ -11,10 +12,10 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2">
             <Glasses className="h-8 w-8 text-gold-600" />
             <span className="font-playfair text-2xl font-bold text-gray-900">VisionApp</span>
-          </div>
+          </Link>
 
           {/* Navigation Desktop */}
           <nav className="hidden md:flex items-center space-x-8">
@@ -34,12 +35,14 @@ const Header = () => {
 
           {/* CTA Button Desktop */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button 
-              variant="outline" 
-              className="border-gold-600 text-gold-700 hover:bg-gold-50"
-            >
-              Iniciar Sesión
-            </Button>
+            <Link to="/login">
+              <Button 
+                variant="outline" 
+                className="border-gold-600 text-gold-700 hover:bg-gold-50"
+              >
+                Iniciar Sesión
+              </Button>
+            </Link>
             <Button className="bg-gold-600 hover:bg-gold-700 text-white">
               Descargar App
             </Button>
@@ -71,12 +74,14 @@ const Header = () => {
                 Testimonios
               </a>
               <div className="pt-4 space-y-2">
-                <Button 
-                  variant="outline" 
-                  className="w-full border-gold-600 text-gold-700 hover:bg-gold-50"
-                >
-                  Iniciar Sesión
-                </Button>
+                <Link to="/login">
+                  <Button 
+                    variant="outline" 
+                    className="w-full border-gold-600 text-gold-700 hover:bg-gold-50"
+                  >
+                    Iniciar Sesión
+                  </Button>
+                </Link>
                 <Button className="w-full bg-gold-600 hover:bg-gold-700 text-white">
                   Descargar App
                 </Button>
