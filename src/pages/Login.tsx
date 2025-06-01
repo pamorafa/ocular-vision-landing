@@ -25,14 +25,14 @@ const Login = () => {
         <div className="max-w-md w-full space-y-8">
           {/* Header */}
           <div className="text-center">
-            <Link to="/" className="inline-flex items-center space-x-2 text-gold-600 hover:text-gold-700 transition-colors mb-8">
+            <Link to="/" className="inline-flex items-center space-x-2 text-bottle-600 hover:text-bottle-700 transition-colors mb-8">
               <ArrowLeft className="h-5 w-5" />
               <span>Volver al inicio</span>
             </Link>
             
             <div className="flex items-center justify-center space-x-2 mb-6">
-              <Glasses className="h-10 w-10 text-gold-600" />
-              <h1 className="font-playfair text-3xl font-bold text-gray-900">VisionApp</h1>
+              <Glasses className="h-10 w-10 text-bottle-600" />
+              <h1 className="font-playfair text-3xl font-bold text-bottle-700">Piti</h1>
             </div>
             
             <h2 className="font-playfair text-2xl font-bold text-gray-900 mb-2">
@@ -58,7 +58,7 @@ const Login = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="tu@email.com"
-                  className="pl-10 h-12 border-gray-300 focus:border-gold-600 focus:ring-gold-600"
+                  className="pl-10 h-12 border-gray-300 focus:border-bottle-600 focus:ring-bottle-600"
                   required
                 />
               </div>
@@ -77,7 +77,7 @@ const Login = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Tu contraseña"
-                  className="pl-10 pr-10 h-12 border-gray-300 focus:border-gold-600 focus:ring-gold-600"
+                  className="pl-10 pr-10 h-12 border-gray-300 focus:border-bottle-600 focus:ring-bottle-600"
                   required
                 />
                 <button
@@ -96,7 +96,7 @@ const Login = () => {
                 <input
                   id="remember"
                   type="checkbox"
-                  className="h-4 w-4 text-gold-600 focus:ring-gold-600 border-gray-300 rounded"
+                  className="h-4 w-4 text-bottle-600 focus:ring-bottle-600 border-gray-300 rounded"
                 />
                 <Label htmlFor="remember" className="text-sm text-gray-700">
                   Recordarme
@@ -104,7 +104,7 @@ const Login = () => {
               </div>
               <Link
                 to="/forgot-password"
-                className="text-sm text-gold-600 hover:text-gold-700 font-medium"
+                className="text-sm text-bottle-600 hover:text-bottle-700 font-medium"
               >
                 ¿Olvidaste tu contraseña?
               </Link>
@@ -113,7 +113,7 @@ const Login = () => {
             {/* Login Button */}
             <Button
               type="submit"
-              className="w-full h-12 bg-gold-600 hover:bg-gold-700 text-white font-semibold text-lg"
+              className="w-full h-12 bg-bottle-600 hover:bg-bottle-700 text-white font-semibold text-lg"
             >
               Iniciar Sesión
             </Button>
@@ -158,7 +158,7 @@ const Login = () => {
               ¿No tienes una cuenta?{' '}
               <Link
                 to="/register"
-                className="text-gold-600 hover:text-gold-700 font-semibold"
+                className="text-bottle-600 hover:text-bottle-700 font-semibold"
               >
                 Regístrate gratis
               </Link>
@@ -168,7 +168,7 @@ const Login = () => {
       </div>
 
       {/* Right side - Image/Branding */}
-      <div className="hidden lg:flex lg:flex-1 bg-gradient-to-br from-gold-500 to-gold-600 relative overflow-hidden">
+      <div className="hidden lg:flex lg:flex-1 bg-gradient-to-br from-bottle-500 to-bottle-600 relative overflow-hidden">
         {/* Background pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-20 w-40 h-40 bg-white rounded-full"></div>

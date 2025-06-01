@@ -6,8 +6,8 @@ const Hero = () => {
   return (
     <section id="inicio" className="relative bg-gradient-to-br from-gray-50 to-white py-20 lg:py-32 overflow-hidden">
       {/* Decorative elements */}
-      <div className="absolute top-10 left-10 w-20 h-20 bg-gold-100 rounded-full opacity-60 animate-pulse"></div>
-      <div className="absolute bottom-10 right-10 w-32 h-32 bg-gold-50 rounded-full opacity-40"></div>
+      <div className="absolute top-10 left-10 w-20 h-20 bg-bottle-100 rounded-full opacity-60 animate-pulse"></div>
+      <div className="absolute bottom-10 right-10 w-32 h-32 bg-bottle-50 rounded-full opacity-40"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -24,7 +24,7 @@ const Hero = () => {
             
             <h1 className="font-playfair text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               Encuentra las 
-              <span className="text-gold-600"> gafas perfectas</span> 
+              <span className="text-bottle-600"> gafas perfectas</span> 
               en segundos
             </h1>
             
@@ -36,7 +36,7 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button 
                 size="lg" 
-                className="bg-gold-600 hover:bg-gold-700 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                className="bg-bottle-600 hover:bg-bottle-700 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <Smartphone className="mr-2 h-5 w-5" />
                 Descargar Gratis
@@ -44,7 +44,7 @@ const Hero = () => {
               <Button 
                 variant="outline" 
                 size="lg"
-                className="border-2 border-gray-300 hover:border-gold-600 text-gray-700 hover:text-gold-700 px-8 py-4 text-lg font-semibold rounded-xl hover:bg-gold-50 transition-all duration-300"
+                className="border-2 border-gray-300 hover:border-bottle-600 text-gray-700 hover:text-bottle-700 px-8 py-4 text-lg font-semibold rounded-xl hover:bg-bottle-50 transition-all duration-300"
               >
                 <Play className="mr-2 h-5 w-5" />
                 Ver Demo
@@ -98,8 +98,8 @@ const Hero = () => {
                     {/* Virtual try-on area */}
                     <div className="bg-gray-100 rounded-2xl h-48 mb-6 flex items-center justify-center">
                       <div className="text-center">
-                        <div className="w-16 h-16 bg-gold-100 rounded-full mx-auto mb-3 flex items-center justify-center">
-                          <Smartphone className="h-8 w-8 text-gold-600" />
+                        <div className="w-16 h-16 bg-bottle-100 rounded-full mx-auto mb-3 flex items-center justify-center">
+                          <Smartphone className="h-8 w-8 text-bottle-600" />
                         </div>
                         <p className="text-gray-500 text-sm">Cámara activada</p>
                       </div>
@@ -112,7 +112,7 @@ const Hero = () => {
                           <div className="w-12 h-8 bg-gold-200 rounded"></div>
                           <div>
                             <p className="font-semibold text-sm">Ray-Ban Classic</p>
-                            <p className="text-gold-600 text-sm font-bold">€149</p>
+                            <p className="text-bottle-600 text-sm font-bold">€149</p>
                           </div>
                         </div>
                       </div>
@@ -121,7 +121,7 @@ const Hero = () => {
                           <div className="w-12 h-8 bg-gray-800 rounded"></div>
                           <div>
                             <p className="font-semibold text-sm">Oakley Sport</p>
-                            <p className="text-gold-600 text-sm font-bold">€189</p>
+                            <p className="text-bottle-600 text-sm font-bold">€189</p>
                           </div>
                         </div>
                       </div>
@@ -132,8 +132,8 @@ const Hero = () => {
             </div>
             
             {/* Floating elements */}
-            <div className="absolute -top-4 -left-4 w-20 h-20 bg-gold-100 rounded-full opacity-80 animate-pulse"></div>
-            <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-gold-50 rounded-full opacity-60"></div>
+            <div className="absolute -top-4 -left-4 w-20 h-20 bg-bottle-100 rounded-full opacity-80 animate-pulse"></div>
+            <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-bottle-50 rounded-full opacity-60"></div>
           </div>
         </div>
       </div>
