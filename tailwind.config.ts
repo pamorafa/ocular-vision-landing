@@ -67,29 +67,22 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				gold: {
-					50: '#fefdf7',
-					100: '#fef9e7',
-					200: '#fcf0c5',
-					300: '#f9e097',
-					400: '#f5ca67',
-					500: '#f1b442',
-					600: '#e19b2b',
-					700: '#bc7d25',
-					800: '#9a6426',
-					900: '#7f5322',
-				},
-				bottle: {
-					50: '#f0f9f0',
-					100: '#dcf2dc',
-					200: '#bce5bc',
-					300: '#8fd18f',
-					400: '#5bb55b',
-					500: '#2d5016',
-					600: '#1f3d0f',
-					700: '#18300c',
-					800: '#142609',
-					900: '#111f08',
+				// Colores principales minimalistas
+				piti: {
+					black: '#000000',
+					white: '#ffffff',
+					gray: {
+						50: '#f9fafb',
+						100: '#f3f4f6',
+						200: '#e5e7eb',
+						300: '#d1d5db',
+						400: '#9ca3af',
+						500: '#6b7280',
+						600: '#4b5563',
+						700: '#374151',
+						800: '#1f2937',
+						900: '#111827',
+					}
 				}
 			},
 			borderRadius: {

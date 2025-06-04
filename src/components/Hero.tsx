@@ -1,14 +1,14 @@
 
 import { Button } from '@/components/ui/button';
-import { Play, Smartphone, Star } from 'lucide-react';
+import { Play, Smartphone, Star, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
-    <section id="inicio" className="relative bg-gradient-to-br from-gray-50 to-white py-20 lg:py-32 overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute top-10 left-10 w-20 h-20 bg-bottle-100 rounded-full opacity-60 animate-pulse"></div>
-      <div className="absolute bottom-10 right-10 w-32 h-32 bg-bottle-50 rounded-full opacity-40"></div>
+    <section id="inicio" className="relative bg-white py-20 lg:py-32 overflow-hidden">
+      {/* Decorative elements minimalistas */}
+      <div className="absolute top-10 left-10 w-20 h-20 bg-gray-100 rounded-full opacity-60"></div>
+      <div className="absolute bottom-10 right-10 w-32 h-32 bg-gray-50 rounded-full opacity-40"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -16,115 +16,123 @@ const Hero = () => {
           <div className="text-center lg:text-left animate-fade-in">
             <div className="flex items-center justify-center lg:justify-start space-x-1 mb-4">
               {[1, 2, 3, 4, 5].map((star) => (
-                <Star key={star} className="h-5 w-5 fill-gold-400 text-gold-400" />
+                <Star key={star} className="h-5 w-5 fill-black text-black" />
               ))}
               <span className="ml-2 text-sm font-medium text-gray-600">
                 +10,000 usuarios satisfechos
               </span>
             </div>
+
+            {/* Ubicación de Chile */}
+            <div className="flex items-center justify-center lg:justify-start space-x-1 mb-6">
+              <MapPin className="h-4 w-4 text-gray-500" />
+              <span className="text-sm text-gray-500">Valparaíso, Chile</span>
+            </div>
             
-            <h1 className="font-playfair text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              Encuentra las 
-              <span className="text-bottle-600"> gafas perfectas</span> 
+            <h1 className="font-playfair text-4xl sm:text-5xl lg:text-6xl font-bold text-black mb-6 leading-tight">
+              Encuentra los 
+              <span className="text-gray-600"> cristales perfectos</span> 
               en segundos
             </h1>
             
             <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl">
-              Prueba virtual con IA, miles de modelos exclusivos y envío gratis. 
-              La experiencia más completa para elegir tus gafas ideales.
+              Explora nuestra colección de cristales curativos y encuentra la energía que necesitas. 
+              La experiencia más completa para tu bienestar espiritual.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Link to="/descargar">
                 <Button 
                   size="lg" 
-                  className="bg-bottle-600 hover:bg-bottle-700 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="bg-black hover:bg-gray-800 text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   <Smartphone className="mr-2 h-5 w-5" />
                   Descargar Gratis
                 </Button>
               </Link>
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="border-2 border-gray-300 hover:border-bottle-600 text-gray-700 hover:text-bottle-700 px-8 py-4 text-lg font-semibold rounded-xl hover:bg-bottle-50 transition-all duration-300"
-              >
-                <Play className="mr-2 h-5 w-5" />
-                Ver Demo
-              </Button>
+              <Link to="/cristales">
+                <Button 
+                  variant="outline" 
+                  size="lg"
+                  className="border-2 border-black text-black hover:bg-gray-50 px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300"
+                >
+                  <Play className="mr-2 h-5 w-5" />
+                  Ver Catálogo
+                </Button>
+              </Link>
             </div>
             
             <div className="mt-12 flex items-center justify-center lg:justify-start space-x-8 text-sm text-gray-500">
               <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                <div className="w-2 h-2 bg-black rounded-full"></div>
                 <span>iOS y Android</span>
               </div>
               <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                <div className="w-2 h-2 bg-black rounded-full"></div>
                 <span>Envío Gratis</span>
               </div>
               <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                <div className="w-2 h-2 bg-black rounded-full"></div>
                 <span>30 días de prueba</span>
               </div>
             </div>
           </div>
 
-          {/* Right Content - App Preview */}
+          {/* Right Content - App Preview minimalista */}
           <div className="relative animate-scale-in">
             <div className="relative z-10">
               {/* Phone mockup */}
               <div className="mx-auto w-72 h-[600px] bg-black rounded-[3rem] p-2 shadow-2xl">
                 <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden">
                   {/* App interface mockup */}
-                  <div className="h-full bg-gradient-to-b from-gray-50 to-white p-6">
+                  <div className="h-full bg-white p-6">
                     {/* Status bar */}
                     <div className="flex justify-between items-center mb-8">
                       <div className="w-16 h-1 bg-black rounded-full"></div>
                       <div className="flex space-x-1">
                         <div className="w-4 h-4 bg-gray-300 rounded-full"></div>
                         <div className="w-4 h-4 bg-gray-300 rounded-full"></div>
-                        <div className="w-4 h-4 bg-green-500 rounded-full"></div>
+                        <div className="w-4 h-4 bg-black rounded-full"></div>
                       </div>
                     </div>
                     
                     {/* App content */}
                     <div className="text-center mb-6">
-                      <h3 className="font-playfair text-2xl font-bold text-gray-900 mb-2">
-                        Prueba Virtual
+                      <h3 className="font-playfair text-2xl font-bold text-black mb-2">
+                        PITI Cristales
                       </h3>
                       <p className="text-gray-600 text-sm">
-                        Ve cómo te quedan antes de comprar
+                        Tu guía espiritual personal
                       </p>
                     </div>
                     
-                    {/* Virtual try-on area */}
-                    <div className="bg-gray-100 rounded-2xl h-48 mb-6 flex items-center justify-center">
+                    {/* Cristal area */}
+                    <div className="bg-gray-50 rounded-2xl h-48 mb-6 flex items-center justify-center border border-gray-200">
                       <div className="text-center">
-                        <div className="w-16 h-16 bg-bottle-100 rounded-full mx-auto mb-3 flex items-center justify-center">
-                          <Smartphone className="h-8 w-8 text-bottle-600" />
+                        <div className="w-16 h-16 bg-gray-200 rounded-full mx-auto mb-3 flex items-center justify-center">
+                          <Glasses className="h-8 w-8 text-gray-600" />
                         </div>
-                        <p className="text-gray-500 text-sm">Cámara activada</p>
+                        <p className="text-gray-500 text-sm">Explora cristales</p>
                       </div>
                     </div>
                     
                     {/* Product cards */}
                     <div className="space-y-3">
-                      <div className="bg-white rounded-xl p-4 shadow-sm border">
+                      <div className="bg-gray-50 rounded-xl p-4 border border-gray-200">
                         <div className="flex items-center space-x-3">
-                          <div className="w-12 h-8 bg-gold-200 rounded"></div>
+                          <div className="w-12 h-8 bg-gray-300 rounded"></div>
                           <div>
-                            <p className="font-semibold text-sm">Ray-Ban Classic</p>
-                            <p className="text-bottle-600 text-sm font-bold">€149</p>
+                            <p className="font-semibold text-sm text-black">Cuarzo Rosa</p>
+                            <p className="text-gray-600 text-sm font-bold">$15.000</p>
                           </div>
                         </div>
                       </div>
-                      <div className="bg-white rounded-xl p-4 shadow-sm border">
+                      <div className="bg-gray-50 rounded-xl p-4 border border-gray-200">
                         <div className="flex items-center space-x-3">
-                          <div className="w-12 h-8 bg-gray-800 rounded"></div>
+                          <div className="w-12 h-8 bg-black rounded"></div>
                           <div>
-                            <p className="font-semibold text-sm">Oakley Sport</p>
-                            <p className="text-bottle-600 text-sm font-bold">€189</p>
+                            <p className="font-semibold text-sm text-black">Obsidiana</p>
+                            <p className="text-gray-600 text-sm font-bold">$20.000</p>
                           </div>
                         </div>
                       </div>
@@ -134,9 +142,9 @@ const Hero = () => {
               </div>
             </div>
             
-            {/* Floating elements */}
-            <div className="absolute -top-4 -left-4 w-20 h-20 bg-bottle-100 rounded-full opacity-80 animate-pulse"></div>
-            <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-bottle-50 rounded-full opacity-60"></div>
+            {/* Floating elements minimalistas */}
+            <div className="absolute -top-4 -left-4 w-20 h-20 bg-gray-100 rounded-full opacity-80"></div>
+            <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-gray-50 rounded-full opacity-60"></div>
           </div>
         </div>
       </div>
