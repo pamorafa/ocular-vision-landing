@@ -1,6 +1,6 @@
 
 import { Button } from '@/components/ui/button';
-import { Play, Smartphone, Star, MapPin } from 'lucide-react';
+import { Play, Smartphone, Star, MapPin, Glasses } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Hero = () => {
