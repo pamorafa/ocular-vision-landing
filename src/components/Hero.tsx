@@ -1,11 +1,8 @@
-
 import { Button } from '@/components/ui/button';
 import { Play, Smartphone, Star, MapPin, Glasses } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const Hero = () => {
-  return (
-    <section id="inicio" className="relative bg-white py-20 lg:py-32 overflow-hidden">
+  return <section id="inicio" className="relative bg-white py-20 lg:py-32 overflow-hidden">
       {/* Decorative elements minimalistas */}
       <div className="absolute top-10 left-10 w-20 h-20 bg-gray-100 rounded-full opacity-60"></div>
       <div className="absolute bottom-10 right-10 w-32 h-32 bg-gray-50 rounded-full opacity-40"></div>
@@ -15,9 +12,7 @@ const Hero = () => {
           {/* Left Content */}
           <div className="text-center lg:text-left animate-fade-in">
             <div className="flex items-center justify-center lg:justify-start space-x-1 mb-4">
-              {[1, 2, 3, 4, 5].map((star) => (
-                <Star key={star} className="h-5 w-5 fill-black text-black" />
-              ))}
+              {[1, 2, 3, 4, 5].map(star => <Star key={star} className="h-5 w-5 fill-black text-black" />)}
               <span className="ml-2 text-sm font-medium text-gray-600">
                 +10,000 usuarios satisfechos
               </span>
@@ -25,8 +20,8 @@ const Hero = () => {
 
             {/* Ubicación de Chile */}
             <div className="flex items-center justify-center lg:justify-start space-x-1 mb-6">
-              <MapPin className="h-4 w-4 text-gray-500" />
-              <span className="text-sm text-gray-500">Valparaíso, Chile</span>
+              
+              
             </div>
             
             <h1 className="font-playfair text-4xl sm:text-5xl lg:text-6xl font-bold text-black mb-6 leading-tight">
@@ -42,20 +37,13 @@ const Hero = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Link to="/descargar">
-                <Button 
-                  size="lg" 
-                  className="bg-black hover:bg-gray-800 text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-                >
+                <Button size="lg" className="bg-black hover:bg-gray-800 text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
                   <Smartphone className="mr-2 h-5 w-5" />
                   Descargar Gratis
                 </Button>
               </Link>
               <Link to="/cristales">
-                <Button 
-                  variant="outline" 
-                  size="lg"
-                  className="border-2 border-black text-black hover:bg-gray-50 px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300"
-                >
+                <Button variant="outline" size="lg" className="border-2 border-black text-black hover:bg-gray-50 px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300">
                   <Play className="mr-2 h-5 w-5" />
                   Ver Catálogo
                 </Button>
@@ -131,7 +119,7 @@ const Hero = () => {
                         <div className="flex items-center space-x-3">
                           <div className="w-12 h-8 bg-black rounded"></div>
                           <div>
-                            <p className="font-semibold text-sm text-black">Obsidiana</p>
+                            <p className="font-semibold text-sm text-black">Lentes de sol</p>
                             <p className="text-gray-600 text-sm font-bold">$20.000</p>
                           </div>
                         </div>
@@ -148,8 +136,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
