@@ -1,6 +1,7 @@
 
 import { Button } from '@/components/ui/button';
 import { Play, Smartphone, Star } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -34,13 +35,15 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button 
-                size="lg" 
-                className="bg-bottle-600 hover:bg-bottle-700 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                <Smartphone className="mr-2 h-5 w-5" />
-                Descargar Gratis
-              </Button>
+              <Link to="/descargar">
+                <Button 
+                  size="lg" 
+                  className="bg-bottle-600 hover:bg-bottle-700 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                >
+                  <Smartphone className="mr-2 h-5 w-5" />
+                  Descargar Gratis
+                </Button>
+              </Link>
               <Button 
                 variant="outline" 
                 size="lg"

@@ -4,6 +4,7 @@ import { Toaster } from '@/components/ui/toaster';
 import Index from '@/pages/Index';
 import Login from '@/pages/Login';
 import CrystalCatalog from '@/pages/CrystalCatalog';
+import DownloadApp from '@/pages/DownloadApp';
 import NotFound from '@/pages/NotFound';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Index />} />
         <Route path="/login" element={<Login />} />
         <Route path="/cristales" element={<CrystalCatalog />} />
+        <Route path="/descargar" element={<DownloadApp />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Toaster />

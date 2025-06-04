@@ -46,9 +46,11 @@ const Header = () => {
                 Iniciar Sesión
               </Button>
             </Link>
-            <Button className="bg-bottle-600 hover:bg-bottle-700 text-white">
-              Descargar App
-            </Button>
+            <Link to="/descargar">
+              <Button className="bg-bottle-600 hover:bg-bottle-700 text-white">
+                Descargar App
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -88,9 +90,11 @@ const Header = () => {
                     Iniciar Sesión
                   </Button>
                 </Link>
-                <Button className="w-full bg-bottle-600 hover:bg-bottle-700 text-white">
-                  Descargar App
-                </Button>
+                <Link to="/descargar">
+                  <Button className="w-full bg-bottle-600 hover:bg-bottle-700 text-white">
+                    Descargar App
+                  </Button>
+                </Link>
               </div>
             </nav>
           </div>
