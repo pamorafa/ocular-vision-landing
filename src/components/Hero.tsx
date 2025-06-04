@@ -26,7 +26,7 @@ const Hero = () => {
             
             <h1 className="font-playfair text-4xl sm:text-5xl lg:text-6xl font-bold text-black mb-6 leading-tight">
               Encuentra los 
-              <span className="text-gray-600"> cristales perfectos</span> 
+              <span className="text-gray-600"> cristales perfectos </span> 
               en segundos
             </h1>
             
