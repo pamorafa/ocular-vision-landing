@@ -1,11 +1,26 @@
 
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Eye } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+
+  const handleScrollToSection = (sectionId: string) => {
+    if (location.pathname !== '/') {
+      // Si no estamos en la página principal, navegar primero y luego hacer scroll
+      window.location.href = `/#${sectionId}`;
+    } else {
+      // Si estamos en la página principal, hacer scroll directo
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    setIsMenuOpen(false);
+  };
 
   return (
     <header className="bg-white/95 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50">
@@ -19,21 +34,33 @@ const Header = () => {
 
           {/* Navigation Desktop */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#inicio" className="text-gray-700 hover:text-black transition-colors font-medium">
+            <button 
+              onClick={() => handleScrollToSection('inicio')}
+              className="text-gray-700 hover:text-black transition-colors font-medium"
+            >
               Inicio
-            </a>
+            </button>
             <Link to="/catalogo" className="text-gray-700 hover:text-black transition-colors font-medium">
               Catálogo
             </Link>
-            <a href="#caracteristicas" className="text-gray-700 hover:text-black transition-colors font-medium">
+            <button 
+              onClick={() => handleScrollToSection('caracteristicas')}
+              className="text-gray-700 hover:text-black transition-colors font-medium"
+            >
               Servicios
-            </a>
-            <a href="#productos" className="text-gray-700 hover:text-black transition-colors font-medium">
+            </button>
+            <button 
+              onClick={() => handleScrollToSection('productos')}
+              className="text-gray-700 hover:text-black transition-colors font-medium"
+            >
               Productos
-            </a>
-            <a href="#testimonios" className="text-gray-700 hover:text-black transition-colors font-medium">
+            </button>
+            <button 
+              onClick={() => handleScrollToSection('testimonios')}
+              className="text-gray-700 hover:text-black transition-colors font-medium"
+            >
               Reseñas
-            </a>
+            </button>
           </nav>
 
           {/* CTA Button Desktop */}
@@ -66,23 +93,35 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-200">
             <nav className="flex flex-col space-y-3">
-              <a href="#inicio" className="text-gray-700 hover:text-black font-medium py-2">
+              <button 
+                onClick={() => handleScrollToSection('inicio')}
+                className="text-gray-700 hover:text-black font-medium py-2 text-left"
+              >
                 Inicio
-              </a>
-              <Link to="/catalogo" className="text-gray-700 hover:text-black font-medium py-2">
+              </button>
+              <Link to="/catalogo" className="text-gray-700 hover:text-black font-medium py-2" onClick={() => setIsMenuOpen(false)}>
                 Catálogo
               </Link>
-              <a href="#caracteristicas" className="text-gray-700 hover:text-black font-medium py-2">
+              <button 
+                onClick={() => handleScrollToSection('caracteristicas')}
+                className="text-gray-700 hover:text-black font-medium py-2 text-left"
+              >
                 Servicios
-              </a>
-              <a href="#productos" className="text-gray-700 hover:text-black font-medium py-2">
+              </button>
+              <button 
+                onClick={() => handleScrollToSection('productos')}
+                className="text-gray-700 hover:text-black font-medium py-2 text-left"
+              >
                 Productos
-              </a>
-              <a href="#testimonios" className="text-gray-700 hover:text-black font-medium py-2">
+              </button>
+              <button 
+                onClick={() => handleScrollToSection('testimonios')}
+                className="text-gray-700 hover:text-black font-medium py-2 text-left"
+              >
                 Reseñas
-              </a>
+              </button>
               <div className="pt-4 space-y-2">
-                <Link to="/login">
+                <Link to="/login" onClick={() => setIsMenuOpen(false)}>
                   <Button 
                     variant="outline" 
                     className="w-full border-black text-black hover:bg-gray-100"
@@ -90,7 +129,7 @@ const Header = () => {
                     Iniciar Sesión
                   </Button>
                 </Link>
-                <Link to="/descargar">
+                <Link to="/descargar" onClick={() => setIsMenuOpen(false)}>
                   <Button className="w-full bg-black hover:bg-gray-800 text-white">
                     Descargar App
                   </Button>
