@@ -1,8 +1,11 @@
+
 import { Button } from '@/components/ui/button';
-import { Play, Smartphone, Star, MapPin, Glasses } from 'lucide-react';
+import { Play, Smartphone, Star, MapPin, Eye } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
 const Hero = () => {
-  return <section id="inicio" className="relative bg-white py-20 lg:py-32 overflow-hidden">
+  return (
+    <section id="inicio" className="relative bg-white py-20 lg:py-32 overflow-hidden">
       {/* Decorative elements minimalistas */}
       <div className="absolute top-10 left-10 w-20 h-20 bg-gray-100 rounded-full opacity-60"></div>
       <div className="absolute bottom-10 right-10 w-32 h-32 bg-gray-50 rounded-full opacity-40"></div>
@@ -12,37 +15,39 @@ const Hero = () => {
           {/* Left Content */}
           <div className="text-center lg:text-left animate-fade-in">
             <div className="flex items-center justify-center lg:justify-start space-x-1 mb-4">
-              {[1, 2, 3, 4, 5].map(star => <Star key={star} className="h-5 w-5 fill-black text-black" />)}
+              {[1, 2, 3, 4, 5].map(star => 
+                <Star key={star} className="h-5 w-5 fill-black text-black" />
+              )}
               <span className="ml-2 text-sm font-medium text-gray-600">
-                +10,000 usuarios satisfechos
+                +10,000 clientes satisfechos
               </span>
             </div>
 
             {/* Ubicación de Chile */}
             <div className="flex items-center justify-center lg:justify-start space-x-1 mb-6">
-              
-              
+              <MapPin className="h-4 w-4 text-gray-600" />
+              <span className="text-sm text-gray-600">Valparaíso, Chile</span>
             </div>
             
             <h1 className="font-playfair text-4xl sm:text-5xl lg:text-6xl font-bold text-black mb-6 leading-tight">
-              Encuentra los 
-              <span className="text-gray-600"> cristales perfectos </span> 
-              en segundos
+              Encuentra las 
+              <span className="text-gray-600"> gafas perfectas </span> 
+              para tu estilo
             </h1>
             
             <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl">
-              Explora nuestra colección de cristales curativos y encuentra la energía que necesitas. 
-              La experiencia más completa para tu bienestar espiritual.
+              La mayor colección de gafas graduadas y lentes de sol en Chile. 
+              Prueba virtual con IA, examen de vista online y envío gratis.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Link to="/descargar">
                 <Button size="lg" className="bg-black hover:bg-gray-800 text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
                   <Smartphone className="mr-2 h-5 w-5" />
-                  Descargar Gratis
+                  Descargar App
                 </Button>
               </Link>
-              <Link to="/cristales">
+              <Link to="/catalogo">
                 <Button variant="outline" size="lg" className="border-2 border-black text-black hover:bg-gray-50 px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300">
                   <Play className="mr-2 h-5 w-5" />
                   Ver Catálogo
@@ -53,7 +58,7 @@ const Hero = () => {
             <div className="mt-12 flex items-center justify-center lg:justify-start space-x-8 text-sm text-gray-500">
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-black rounded-full"></div>
-                <span>iOS y Android</span>
+                <span>Prueba Virtual</span>
               </div>
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-black rounded-full"></div>
@@ -61,12 +66,12 @@ const Hero = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-black rounded-full"></div>
-                <span>30 días de prueba</span>
+                <span>Examen de Vista</span>
               </div>
             </div>
           </div>
 
-          {/* Right Content - App Preview minimalista */}
+          {/* Right Content - App Preview */}
           <div className="relative animate-scale-in">
             <div className="relative z-10">
               {/* Phone mockup */}
@@ -87,20 +92,20 @@ const Hero = () => {
                     {/* App content */}
                     <div className="text-center mb-6">
                       <h3 className="font-playfair text-2xl font-bold text-black mb-2">
-                        PITI Cristales
+                        PITI Óptica
                       </h3>
                       <p className="text-gray-600 text-sm">
-                        Tu guía espiritual personal
+                        Tu óptica digital
                       </p>
                     </div>
                     
-                    {/* Cristal area */}
+                    {/* Virtual try-on area */}
                     <div className="bg-gray-50 rounded-2xl h-48 mb-6 flex items-center justify-center border border-gray-200">
                       <div className="text-center">
                         <div className="w-16 h-16 bg-gray-200 rounded-full mx-auto mb-3 flex items-center justify-center">
-                          <Glasses className="h-8 w-8 text-gray-600" />
+                          <Eye className="h-8 w-8 text-gray-600" />
                         </div>
-                        <p className="text-gray-500 text-sm">Explora cristales</p>
+                        <p className="text-gray-500 text-sm">Prueba Virtual</p>
                       </div>
                     </div>
                     
@@ -108,10 +113,10 @@ const Hero = () => {
                     <div className="space-y-3">
                       <div className="bg-gray-50 rounded-xl p-4 border border-gray-200">
                         <div className="flex items-center space-x-3">
-                          <div className="w-12 h-8 bg-gray-300 rounded"></div>
+                          <div className="w-12 h-8 bg-gradient-to-r from-amber-400 to-amber-600 rounded"></div>
                           <div>
-                            <p className="font-semibold text-sm text-black">Cuarzo Rosa</p>
-                            <p className="text-gray-600 text-sm font-bold">$15.000</p>
+                            <p className="font-semibold text-sm text-black">Ray-Ban Aviator</p>
+                            <p className="text-gray-600 text-sm font-bold">$89.990</p>
                           </div>
                         </div>
                       </div>
@@ -119,8 +124,8 @@ const Hero = () => {
                         <div className="flex items-center space-x-3">
                           <div className="w-12 h-8 bg-black rounded"></div>
                           <div>
-                            <p className="font-semibold text-sm text-black">Lentes de sol</p>
-                            <p className="text-gray-600 text-sm font-bold">$20.000</p>
+                            <p className="font-semibold text-sm text-black">Oakley Sport</p>
+                            <p className="text-gray-600 text-sm font-bold">$129.990</p>
                           </div>
                         </div>
                       </div>
@@ -136,6 +141,8 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;

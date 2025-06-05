@@ -11,15 +11,15 @@ const Features = () => {
     },
     {
       icon: Eye,
-      title: 'Examen de Vista',
-      description: 'Realiza un examen básico de vista directamente desde la app y obtén recomendaciones personalizadas.',
+      title: 'Examen de Vista Online',
+      description: 'Realiza un examen básico de vista directamente desde la app y obtén tu graduación actualizada.',
       color: 'text-green-600 bg-green-100'
     },
     {
       icon: Truck,
       title: 'Envío Gratis',
-      description: 'Entrega gratuita en toda España en 24-48h. Cambios y devoluciones sin coste adicional.',
-      color: 'text-gold-600 bg-gold-100'
+      description: 'Entrega gratuita en toda Chile en 24-48h. Cambios y devoluciones sin coste adicional.',
+      color: 'text-gray-600 bg-gray-100'
     },
     {
       icon: Shield,
@@ -30,12 +30,12 @@ const Features = () => {
     {
       icon: Users,
       title: 'Asesoría Personal',
-      description: 'Estilistas expertos te ayudan a elegir el modelo perfecto según tu rostro y estilo.',
+      description: 'Ópticos expertos te ayudan a elegir el modelo perfecto según tu rostro y graduación.',
       color: 'text-pink-600 bg-pink-100'
     },
     {
       icon: Smartphone,
-      title: 'Experiencia Móvil',
+      title: 'App Móvil',
       description: 'Interfaz intuitiva diseñada específicamente para móviles con navegación fluida y rápida.',
       color: 'text-indigo-600 bg-indigo-100'
     }
@@ -48,11 +48,11 @@ const Features = () => {
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="font-playfair text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             ¿Por qué elegir 
-            <span className="text-gold-600"> VisionApp</span>?
+            <span className="text-gray-600"> PITI Óptica</span>?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             La tecnología más avanzada al servicio de tu visión. 
-            Descubre por qué miles de usuarios ya confían en nosotros.
+            Descubre por qué miles de clientes ya confían en nosotros.
           </p>
         </div>
 
@@ -79,20 +79,20 @@ const Features = () => {
 
               {/* Hover indicator */}
               <div className="mt-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="w-12 h-1 bg-gold-600 rounded-full"></div>
+                <div className="w-12 h-1 bg-gray-600 rounded-full"></div>
               </div>
             </div>
           ))}
         </div>
 
         {/* Stats Section */}
-        <div className="mt-20 bg-gradient-to-r from-gold-50 to-gold-100 rounded-3xl p-8 lg:p-12">
+        <div className="mt-20 bg-gradient-to-r from-gray-50 to-gray-100 rounded-3xl p-8 lg:p-12">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             <div className="animate-fade-in">
               <div className="font-playfair text-3xl lg:text-4xl font-bold text-gray-900 mb-2">
                 +10K
               </div>
-              <p className="text-gray-600 font-medium">Usuarios Activos</p>
+              <p className="text-gray-600 font-medium">Clientes Satisfechos</p>
             </div>
             <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
               <div className="font-playfair text-3xl lg:text-4xl font-bold text-gray-900 mb-2">

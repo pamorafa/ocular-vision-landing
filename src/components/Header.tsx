@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Glasses } from 'lucide-react';
+import { Menu, X, Eye } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,7 +13,7 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <Glasses className="h-8 w-8 text-black" />
+            <Eye className="h-8 w-8 text-black" />
             <span className="font-playfair text-2xl font-bold text-black">PITI</span>
           </Link>
 
@@ -22,17 +22,17 @@ const Header = () => {
             <a href="#inicio" className="text-gray-700 hover:text-black transition-colors font-medium">
               Inicio
             </a>
-            <Link to="/cristales" className="text-gray-700 hover:text-black transition-colors font-medium">
-              Cristales
+            <Link to="/catalogo" className="text-gray-700 hover:text-black transition-colors font-medium">
+              Catálogo
             </Link>
             <a href="#caracteristicas" className="text-gray-700 hover:text-black transition-colors font-medium">
-              Características
+              Servicios
             </a>
             <a href="#productos" className="text-gray-700 hover:text-black transition-colors font-medium">
               Productos
             </a>
             <a href="#testimonios" className="text-gray-700 hover:text-black transition-colors font-medium">
-              Testimonios
+              Reseñas
             </a>
           </nav>
 
@@ -69,17 +69,17 @@ const Header = () => {
               <a href="#inicio" className="text-gray-700 hover:text-black font-medium py-2">
                 Inicio
               </a>
-              <Link to="/cristales" className="text-gray-700 hover:text-black font-medium py-2">
-                Cristales
+              <Link to="/catalogo" className="text-gray-700 hover:text-black font-medium py-2">
+                Catálogo
               </Link>
               <a href="#caracteristicas" className="text-gray-700 hover:text-black font-medium py-2">
-                Características
+                Servicios
               </a>
               <a href="#productos" className="text-gray-700 hover:text-black font-medium py-2">
                 Productos
               </a>
               <a href="#testimonios" className="text-gray-700 hover:text-black font-medium py-2">
-                Testimonios
+                Reseñas
               </a>
               <div className="pt-4 space-y-2">
                 <Link to="/login">
